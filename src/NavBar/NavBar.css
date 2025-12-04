@@ -1,0 +1,101 @@
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 80px;
+    padding: 0 2rem;
+    background-color: var(--mainColor);
+    color: var(--textColor);
+    z-index: 10;
+}
+
+nav a{
+    position: relative;
+    margin: 0 2rem;
+    color: var(--textColor);
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* smooth transition */
+}
+
+nav a:hover {
+    color: var(--secondaryColor);
+    text-shadow: 0 0 2px var(--secondaryColor);
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* adjust distance from text */
+    width: 0%;
+    height: 1px; /* thickness of underline */
+    background-color: var(--secondaryColor);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+header .nav-btn{
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--textColor);
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1.8rem;
+}
+@media only screen and (max-width: 1024px){
+    header .nav-btn{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    header nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 260px; /* drawer width */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem;
+        gap: 2rem;
+        
+        background: rgba(16, 21, 31, 0.97);
+        backdrop-filter: blur(6px);
+
+        box-shadow: 4px 0 20px rgba(0,0,0,0.4);
+        
+        transform: translateX(-100%);  /* hidden off-screen */
+        transition: transform 0.35s ease;
+        z-index: 20;
+    }
+
+    header .responsive_nav{
+        transform: translateX(0); /* slide in */
+    }
+
+    nav a{
+        font-size: 1.4rem;
+        margin: 0;
+    }
+
+    nav .nav-close-btn {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.2rem;
+        font-size: 1.8rem;
+    }
+
+    header .nav-open-btn{
+        position: absolute;
+        left: 1.5rem;
+        font-size: 1.8rem;
+    }
+}

@@ -1,0 +1,123 @@
+.mc-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;          /* keeps dashboard nicely centered */
+  margin: 40px auto;          /* add breathing space from edges */
+  gap: 10px;                  /* uniform vertical spacing */
+  box-sizing: border-box;
+}
+
+
+/************ Contol Panel **************/
+
+.mc-component-title {
+    display: flex;
+    justify-content: space-between; /* title on left, tooltip on right */
+    align-items: center;
+    padding: 10px 20px;
+    font-weight: 550;
+    font-size: 1.1rem;
+}
+
+.mc-control-body {
+    display: flex;
+    justify-content: center;
+    gap: 20px;          /* Space between text fields */
+    width: 100%;
+    margin: 10px auto;
+    align-items: center; /* Vertically centers the fields */
+}
+
+
+/***************** Sections ***************/
+.mc-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;   /* center the row horizontally */
+  padding: 0px 10px;
+}
+
+.mc-component-body {
+    height: 80%;
+    width: 110%;
+}
+
+.mc-hist {
+    transform: translate(2%, 6%);
+}
+
+.mc-line {
+    height: 90%;
+    transform: translate(0%, 0%);
+}
+
+.mc-row {
+  display: flex;
+  justify-content: flex-start;  /* start layout from left, only gap defines spacing */
+  align-items: flex-start;
+  gap: 15px;                   /* your desired spacing between boxes */
+  flex-wrap: nowrap;   
+}
+
+
+/************ Individuals ************/
+
+.mc-text {
+    height: 100%;             /* fill the parent box height */
+    width: 100%;              /* do not exceed box width */
+    padding: 15px 20px;       /* space around text */
+    box-sizing: border-box;   /* include padding in width calculation */
+    overflow-wrap: break-word; /* break long words to fit box */
+    word-break: break-word;   /* ensure words don't overflow */
+    line-height: 1.5;         /* improve readability */
+    font-size: 16px;          /* adjust font size if needed */
+    color: inherit;
+    text-align: justify;
+}
+
+.mc-text a {
+    color: #1a73e8;           /* link color */
+    text-decoration: none;
+}
+
+.mc-text a:hover {
+    text-decoration: underline;
+}
+
+.mc-result-highlight {
+    background-color: #504b39;  /* light yellow highlight */
+    border-left: 4px solid #ffc107;  /* accent color */
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-top: 10px;
+    line-height: 1.5;
+
+    /* Inherit text color from parent / index.css */
+    color: inherit;
+}
+
+/* Hide dashboard and show warning on small screens */
+.mc-mobile-warning {
+    display: none;
+    text-align: center;
+    padding: 50px 20px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: #141a28;
+    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 500px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .mc-main {
+        display: none;   /* hide the main dashboard */
+    }
+
+    .mc-mobile-warning {
+        display: block; /* show the warning */
+    }
+}

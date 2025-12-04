@@ -1,0 +1,25 @@
+.projects-cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns by default */
+    gap: 2rem;          /* space between cards */
+    padding: 2rem;
+    width: 800px;       /* fixed width */
+    margin: 0 auto;     /* centers the container horizontally */
+}
+
+.projects-title {
+    font-size: 38px;
+    font-weight: 550;
+}
+
+/* Responsive: single column below 1024px */
+@media (max-width: 1024px) {
+    .projects-cards-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        width: 100%;
+        justify-items: center; /* centers the single column items */
+    }
+}
+
+

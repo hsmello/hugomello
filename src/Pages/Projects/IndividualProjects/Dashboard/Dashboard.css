@@ -1,0 +1,214 @@
+/****************************************************************/
+/********************* Dashboard Page ***************************/
+/****************************************************************/
+
+:root {
+  --dashboard-gap: 20px; /* adjust once here for all gaps */
+}
+
+/* 1) Loading and main div -------------------------------------*/
+
+.loading {
+  display: flex;
+  flex-direction: column;  /* stack spinner and text vertically */
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+  width: 100vw;            /* full viewport width */
+  height: 100vh;           /* full viewport height */
+  text-align: center;
+  font-size: 1.2rem;
+}
+.dashboard-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;          /* keeps dashboard nicely centered */
+  margin: 40px auto;          /* add breathing space from edges */
+  gap: var(--dashboard-gap);                  /* uniform vertical spacing */
+  box-sizing: border-box;
+}
+
+/* 2) Presentation box------------------------------------------*/
+.introduction-title {
+  display: flex;
+  justify-content: center; /* title on left, tooltip on right */
+  align-items: center;
+  padding: 10px 20px;
+  font-weight: 525;
+  font-size: 1.3rem;
+}
+
+.introduction-text {
+    height: 100%;             /* fill the parent box height */
+    width: 100%;              /* do not exceed box width */
+    padding: 15px 20px;       /* space around text */
+    box-sizing: border-box;   /* include padding in width calculation */
+    overflow-wrap: break-word; /* break long words to fit box */
+    word-break: break-word;   /* ensure words don't overflow */
+    line-height: 1.5;         /* improve readability */
+    font-size: 16px;          /* adjust font size if needed */
+    color: inherit;
+    text-align: justify;
+}
+
+/* 3) Control Panel---------------------------------------------*/
+
+.control-title {
+  display: flex;
+  justify-content: space-between; /* title on left, tooltip on right */
+  align-items: center;
+  padding: 10px 20px;
+  font-weight: 550;
+  font-size: 1.1rem;
+}
+
+.control-panel-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* dropdowns on left, radio group on right */
+  align-items: flex-start;
+  padding: 20px;
+  gap: 40px;
+}
+
+.dropdown-column {
+  display: flex;
+  flex-direction: column;
+  margin: -10px 15px;
+  gap: 15px;      /* vertical space between dropdowns */
+  width: 220px;
+}
+
+.radio-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: -20px 50px;
+}
+
+.time-slider {
+  margin-left: 10px;
+}
+
+/* 4) Dashboard Components --------------------------------------*/
+
+/* Each main section (control panel, line chart, row of charts) */
+.dashboard-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;    /* center the inner content */
+}
+
+.charts-row {
+  display: flex;
+  justify-content: space-between; /* even space between charts */
+  align-items: flex-start;
+  width: 100%;
+  gap: var(--dashboard-gap);                       /* uniform gap */
+  flex-wrap: nowrap;               /* keep side by side unless screen small */
+  box-sizing: border-box;
+  flex: 1;                         /* equal growth */
+  min-width: 450px;                /* don’t shrink too small */
+  height: auto;
+}
+
+/****************************************************************/
+/********************* Separate Components **********************/
+/****************************************************************/
+
+/* 1) Reusable -------------------------------------------------*/
+.component-cont {
+  position: absolute;     /* relative to Box (which should be position: relative) */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%); /* center */
+  height: 85%;            /* or 100% if you want full fit */
+  width: 95%;             /* can adjust to your liking */
+  overflow: hidden;       /* keep map inside */
+  box-sizing: border-box;
+}
+
+.component-title {
+    display: flex;
+    align-items: center;     /* vertical  */
+    justify-content: space-between;  /* horizontal  */
+    padding: 10px 20px; 
+    font-weight: 550;        /* optional: make it stand out */
+    font-size: 1.0rem;       /* adjust as needed */
+}
+
+.billing-box {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.main-number {
+    font-size: 50px;       /* Big number for dashboard */
+    font-weight: bold;
+    margin: 40px 0 -5px 0 ;
+}
+
+.main-number-label {
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: auto; /* keeps it close to number while keeping spacing even */
+}
+
+.number-comparison {
+  font-size: 15px;
+  width: 100%;
+  text-align: left;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+}
+
+/* 2) Specific ---------------------------------------------------*/
+
+.stacked-chart-display {
+  position: absolute;     /* relative to Box (which should be position: relative) */
+  top: 50%;
+  left: 50%;
+  transform: translate(-36%, -45%); /* center */
+  height: 80%;            /* or 100% if you want full fit */
+  width: 100%;             /* can adjust to your liking */
+  overflow: hidden;       /* keep map inside */
+  box-sizing: border-box;
+  margin: 30px 0px 0px 0px;
+}
+
+/* 3) Mobile ----------------------------------------------------*/
+
+
+/* Hide dashboard and show warning on small screens */
+.mc-mobile-warning {
+    display: none;
+    text-align: center;
+    padding: 50px 20px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: #141a28;
+    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 500px;
+}
+
+@media only screen and (max-width: 1330px) {
+    .dashboard-main {
+        display: none;   /* hide the main dashboard */
+    }
+
+    .mc-mobile-warning {
+        display: block; /* show the warning */
+    }
+}
