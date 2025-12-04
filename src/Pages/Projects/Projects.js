@@ -5,7 +5,6 @@ import Card from '../../Components/Card'
 
 import RawDataImage from '../../SupportFiles/raw_data.jpg'
 import DashboardImage from '../../SupportFiles/dashboard.jpg'
-import ProgramImage from '../../SupportFiles/program.jpg'
 
 
 function Projects() {

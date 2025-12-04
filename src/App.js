@@ -1,19 +1,19 @@
 import './App.css';
-import Background from './Components/Background.js'
 import NavBar from './NavBar/NavBar';
 import Home from './Pages/Home/Home';
-import Contact from './Pages/Contact/Contact';
 import Projects from './Pages/Projects/Projects';
 import InvestmentApp from './Pages/Projects/IndividualProjects/InvestmentApp/InvestmentApp';
 import Dashboard from './Pages/Projects/IndividualProjects/Dashboard/Dashboard';
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, HashRouter, Routes, Route } from "react-router-dom";
 
+const Router =
+  process.env.NODE_ENV === "production" ? HashRouter : BrowserRouter;
+  
 function App() {
   return (
     <Router>
       <div className="App">
-      {/*<Background />*/}
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />  

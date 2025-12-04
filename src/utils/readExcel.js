@@ -8,7 +8,8 @@ import * as XLSX from 'xlsx';
 export const readExcelFile = async (filePath) => {
   try {
     // Fetch the Excel file from the public folder
-    const response = await fetch(filePath);
+    const url = process.env.PUBLIC_URL + filePath;
+    const response = await fetch(url);
 
     if (!response.ok) {
       console.error(`Failed to fetch Excel file. Status: ${response.status}`);

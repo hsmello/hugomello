@@ -31,9 +31,6 @@ export default function RangeSlider({ value, onChange, min, max, step = 1, width
           '& .MuiSlider-valueLabel': {
             color: 'inherit', // value label text
           },
-          '& .MuiSlider-mark': {
-            backgroundColor: 'currentColor', // marks
-          },
           '& .MuiSlider-track': {
             color: 'currentColor',
           },

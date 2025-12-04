@@ -1,7 +1,6 @@
 import './Dashboard.css'
 import { useEffect, useState } from 'react';
 
-import InfoTooltip from '../../../../Components/InfoTooltip.js';
 import Box from '../../../../Components/Box.js';
 import { formatTitleLabel, formatNumber } from './utils.js'
 
