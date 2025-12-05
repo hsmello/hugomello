@@ -5,14 +5,10 @@ import Projects from './Pages/Projects/Projects';
 import InvestmentApp from './Pages/Projects/IndividualProjects/InvestmentApp/InvestmentApp';
 import Dashboard from './Pages/Projects/IndividualProjects/Dashboard/Dashboard';
 
-import { BrowserRouter, HashRouter, Routes, Route } from "react-router-dom";
-
-const Router =
-  process.env.NODE_ENV === "production" ? HashRouter : BrowserRouter;
+import { Routes, Route } from "react-router-dom";
   
 function App() {
   return (
-    <Router>
       <div className="App">
         <NavBar />
         <Routes>
@@ -23,7 +19,6 @@ function App() {
           <Route path="/projects/dashboard" element={<Dashboard />} />  
         </Routes>
       </div>
-    </Router>
   );
 }
 
