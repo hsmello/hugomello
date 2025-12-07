@@ -17,6 +17,13 @@ function Projects() {
             <div className="projects-cards-container">
 
             <Card 
+                title={'Web Scraping'}
+                bodyText={'Click-to-run tool that detects broken website links and outputs a ready-to-use Excel report.'}
+                onLearnMoreClick={() => navigate('/projects/web-scraping')}
+                image={DashboardImage}
+            />
+
+            <Card 
                 title={'Monte Carlo Simulation'}
                 bodyText={'Leveraging API to have an up-to-date Monte Carlo estimation'}
                 onLearnMoreClick={() => navigate('/projects/monte-carlo-simulation')}

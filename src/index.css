@@ -12,6 +12,8 @@
     --mainColorLight: #141a28;
     --secondaryColor: #ffffff;
     --textColor: #e1e2e7;
+    --highlightColor: #ff6b6b;
+    --linkColor: #6CA8FF;
 }
 
 /* Basic rendering quality improvements */

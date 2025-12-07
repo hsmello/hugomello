@@ -4,6 +4,7 @@ import Home from './Pages/Home/Home';
 import Projects from './Pages/Projects/Projects';
 import InvestmentApp from './Pages/Projects/IndividualProjects/InvestmentApp/InvestmentApp';
 import Dashboard from './Pages/Projects/IndividualProjects/Dashboard/Dashboard';
+import WebScraping from './Pages/Projects/IndividualProjects/WebScraping/WebScraping';
 
 import { Routes, Route } from "react-router-dom";
   
@@ -17,6 +18,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />  
           <Route path="/projects/monte-carlo-simulation" element={<InvestmentApp />} />  
           <Route path="/projects/dashboard" element={<Dashboard />} />  
+          <Route path="/projects/web-scraping" element={<WebScraping />} />  
         </Routes>
       </div>
   );

@@ -1,0 +1,91 @@
+.wb-container {
+    max-width: 900px;
+    margin: 15px auto;
+    padding: 0px 20px;
+}
+
+.wb-issue {
+    padding: 15px 20px;
+}
+
+.wb-issue-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.wb-issue-body {
+    font-size: 1rem;
+    color: var(--highlightColor);
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: var(--highlightColor);
+    font-size: 20px;
+}
+
+.custom-bullets {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.custom-bullets li {
+    display: inline-block; 
+    text-align: left;    
+    position: relative;
+    padding-left: 1em;
+    margin-bottom: 8px;
+}
+
+.custom-bullets li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--highlightColor);
+    left: -20px;
+    top: -7px;     
+    font-size: 1.7rem;
+}
+
+.wb-issue-desc {
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.wb-issue-code {
+    width: 100%;
+    height: 400px;
+    margin: 25px auto 0px;
+    padding: 0px 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .wb-issue-code {
+        height: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    .wb-container {
+        padding: 15px;
+    }
+
+    .wb-issue {
+        padding: 20px;
+    }
+
+    .wb-issue-title {
+        font-size: 1.5rem;
+    }
+
+    .wb-issue-body, .custom-bullets li {
+        font-size: 1rem;
+    }
+}
+
+
+/* Color of numbers inside the code window */
+.react-syntax-highlighter-line-number {
+    color: #ccc !important;
+}
