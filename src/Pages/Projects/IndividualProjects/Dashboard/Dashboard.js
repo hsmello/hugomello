@@ -75,7 +75,7 @@ const Dashboard = () => {
         <div className='dashboard-main' >
             <div className='dashboard-introduction'>
                 <Box width={1200} height={250} bgColor={'#141a28'}>
-                    <div className='introduction-title'>
+                    <div className='individual-project-title'>
                     Responsive Web-based Dashboard
                     </div>
                     <div className='introduction-text'>

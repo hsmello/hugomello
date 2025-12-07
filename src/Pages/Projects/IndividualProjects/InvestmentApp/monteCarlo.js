@@ -194,7 +194,7 @@ const HistoricalChart = () => {
             )}
             <div className='mc-introduction'>
                 <Box width={1200} height={200} bgColor={'#141a28'}>
-                    <div className='introduction-title'>
+                    <div className='individual-project-title'>
                     Real-time metrics
                     </div>
                     <div className='introduction-text'>
