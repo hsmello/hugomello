@@ -1,3 +1,8 @@
+.projects-title {
+    font-size: 34px;
+    font-weight: 550;
+}
+
 .projects-cards-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 columns by default */
@@ -7,9 +12,11 @@
     margin: 0 auto;     /* centers the container horizontally */
 }
 
-.projects-title {
-    font-size: 34px;
-    font-weight: 550;
+.projects-description {
+    width: 800px;
+    margin: 30px auto 0px;
+    text-align: justify;
+    font-size: 17px;
 }
 
 .individual-project-title {
@@ -23,6 +30,13 @@
 
 /* Responsive: single column below 1024px */
 @media (max-width: 1024px) {
+    .projects-description {
+        width: 100%;
+        padding: 0px 20px;
+        text-align: justify;
+        font-size: 17px;
+    }
+
     .projects-cards-container {
         grid-template-columns: 1fr;
         gap: 1.5rem;

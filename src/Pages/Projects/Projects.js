@@ -14,6 +14,11 @@ function Projects() {
             <div className='projects-title'>
             Projects
             </div>
+
+            <div className='projects-description'>
+                Below are a few selected project examples. While most of the projects I developed or contributed to cannot be made public, these examples highlight key skills I applied and strengthened, including real-time API data integration, web-based dashboard development, and process automation.
+            </div>
+
             <div className="projects-cards-container">
 
             <Card 
